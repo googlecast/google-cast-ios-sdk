@@ -29,6 +29,9 @@ Temporary Items
 # User settings
 xcuserdata/
 
+# Workspace
+*.xcworkspacedata
+
 # Build results
 build/
 DerivedData/
@@ -52,6 +55,7 @@ DerivedData/
 .build/
 Packages/
 Package.pins
+Package.resolved
 
 # App packaging
 *.ipa
