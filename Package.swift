@@ -44,6 +44,7 @@ let package = Package(
       sources: ["GoogleCastStatic.swift"],
       linkerSettings: [
         .linkedFramework("AVKit"),
+        .linkedFramework("AVFoundation"),
         .linkedFramework("AVRouting"),
         .linkedFramework("Accelerate"),
         .linkedFramework("AudioToolbox"),
