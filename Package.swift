@@ -30,11 +30,15 @@ let package = Package(
       targets: ["GoogleCastDynamic"]
     ),
   ],
+  dependencies: [
+    .package(url: "https://github.com/google/gtm-session-fetcher.git", .upToNextMajor(from: "3.0.0"))
+  ],
   targets: [
     .target(
       name: "GoogleCastStatic",
       dependencies: [
-        .target(name: "GoogleCastStaticBinary")
+        .target(name: "GoogleCastStaticBinary"),
+        .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher")
       ],
       path: ".",
       sources: ["GoogleCastStatic.swift"],
@@ -69,7 +73,8 @@ let package = Package(
     .target(
       name: "GoogleCastDynamic",
       dependencies: [
-        .target(name: "GoogleCastDynamicBinary")
+        .target(name: "GoogleCastDynamicBinary"),
+        .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher")
       ],
       path: ".",
       sources: ["GoogleCastDynamic.swift"]
