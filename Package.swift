@@ -43,7 +43,7 @@ let package = Package(
       path: ".",
       sources: ["GoogleCastStatic.swift"],
       linkerSettings: [
-        .linkedFramework("AVFoundation"),
+        .linkedFramework("AVKit"),
         .linkedFramework("AVRouting"),
         .linkedFramework("Accelerate"),
         .linkedFramework("AudioToolbox"),
