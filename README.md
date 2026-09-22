@@ -18,7 +18,7 @@ distribution securely.
 5. Select the product (GoogleCastDynamic or GoogleCastStatic) you want to add to
    your target. Do not try to add both.
 
-   **Note:** Due to limitations with Swift Package Manager and static binary frameworks, it is not possible to automatically bundle the required asset resources (such as UI images, storyboards, and localization files) with the static version of the framework (`GoogleCastStatic`). If your application requires these resources (e.g., if you are using the Cast UI components), you should use the dynamic version (`GoogleCastDynamic`), which natively includes all necessary assets.
+   **Note on Static Framework Assets:** Due to limitations with Swift Package Manager, it is not possible to automatically bundle required asset resources (such as UI images, storyboards, and localization files) with the static version of the framework (`GoogleCastStatic`). If you choose the static variant and require Cast UI components, you must manually integrate these assets. To do so, download the static SDK archive from the [official Google Cast iOS SDK developer documentation](https://developers.google.com/cast/docs/ios_sender), extract it, and copy all `*.bundle` files into your Xcode project. Alternatively, you can use the dynamic version (`GoogleCastDynamic`), which natively includes all necessary assets.
 
 ## Usage
 
