@@ -40,8 +40,8 @@ let package = Package(
         .target(name: "GoogleCastStaticBinary"),
         .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher")
       ],
-      path: ".",
-      sources: ["GoogleCastStatic.swift"],
+      // Marker used by the SDK to detect installation via Swift Package Manager.
+      resources: [.copy("GoogleCastSPMDistribution.plist")],
       linkerSettings: [
         .linkedFramework("AVKit"),
         .linkedFramework("AVFoundation"),
@@ -77,8 +77,8 @@ let package = Package(
         .target(name: "GoogleCastDynamicBinary"),
         .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher")
       ],
-      path: ".",
-      sources: ["GoogleCastDynamic.swift"]
+      // Marker used by the SDK to detect installation via Swift Package Manager.
+      resources: [.copy("GoogleCastSPMDistribution.plist")]
     ),
     .binaryTarget(
       name: "GoogleCastDynamicBinary",
